@@ -7,3 +7,7 @@ This is a library management system that enables the user to perform the followi
 3. Search for Books
 4. Issue Books
 5. View all Books
+
+User credentials :-
+Username : admin
+Password : admin
