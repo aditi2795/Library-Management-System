@@ -17,10 +17,10 @@ void returnfunc(void);
 void welcome(void);			
 void login();			
 void main_menu();		
-void addbooks(void);		
-void deletebooks(void);		
-void searchbooks(void);		
-void issuebooks(void);		
+void add_books(void);		
+void delete_books(void);		
+void search_books(void);		
+void issue_books(void);		
 void bookslist(void);		
 void exitapplication(void);		
 int  getdata();
@@ -144,16 +144,16 @@ void main_menu()
 	switch(getch())
 	{
 		case '1':
-		addbooks();
+		add_books();
 		break;
 	case '2':
-		deletebooks();
+		delete_books();
 		break;
 		case '3':
-		searchbooks();
+		search_books();
 	    break;
 	case '4':
-		issuebooks();
+		issue_books();
 	    break;
 	    case '5':
 		bookslist();
@@ -175,7 +175,7 @@ void main_menu()
 
     }
 }
-void addbooks(void)    
+void add_books(void)    
 {
 	system("cls");
 	int i;			
@@ -217,10 +217,11 @@ gotoxy(20,5);
 	    main_menu();
 	else
 	    system("cls");
-	    addbooks();
+	    add_books();
 	}
 }
-void deletebooks()   
+void delete_books() 
+{  
     system("cls");
     int d;
     char another='y';
@@ -290,7 +291,7 @@ void deletebooks()
     gotoxy(10,15);
     main_menu();
 }
-void searchbooks()	    
+void search_books()	    
     system("cls");
     int d;
     gotoxy(20,6);
@@ -348,7 +349,7 @@ void searchbooks()
 	    gotoxy(20,17);
 	    printf("Try another search?(Y/N)");
 	    if(getch()=='y')
-	    searchbooks();
+	    search_books();
 	    else
 	    main_menu();
 	    break;
@@ -395,18 +396,18 @@ void searchbooks()
 	    gotoxy(20,17);
 	    printf("Try another search?(Y/N)");
 	    if(getch()=='y')
-	    searchbooks();
+	    search_books();
 	    else
 	    main_menu();
 	    break;
 	}
 	default :
 	getch();
-	searchbooks();
+	search_books();
     }
     fclose(fp);
 }
-void issuebooks(void)  	{
+void issue_books(void)  	{
     int t;		
 
     system("cls");
@@ -621,7 +622,7 @@ void issuebooks(void)  	{
 	gotoxy(10,18);
 	printf("\nWrong Entry!!");
     getch();
-	issuebooks();
+	issue_books();
 	break;
       }
       gotoxy(1,30);
