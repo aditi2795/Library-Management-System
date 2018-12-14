@@ -100,7 +100,7 @@ void login()
 	scanf("%s",&u);						
 	printf("\n\t\t\tPASSWORD: ");
 	scanf("%s",&p);
-	if((strcmp(u,"pukar")==0) && (strcmp(p,"12345")==0))
+	if((strcmp(u,"admin")==0) && (strcmp(p,"admin")==0))
 	{
 		printf("\n\n\t\t login successful");
 		printf("\n\n\n\t\t\t\t Press any key for main menu.....");
